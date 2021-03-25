@@ -1,25 +1,27 @@
 import React from 'react';
 import HornedBeasts from './Horned-Beasts.js';
-import Data from './data.json';
+import CardDeck from 'react-bootstrap/CardDeck';
+// import Data from './data.json';
 
 class Main extends React.Component {
     render() {
         return (
             <>
-                {
-                    this.props.beasts.map((thisBeast, index) => {
-                        return (
-                            <div key={index}>
-                                <HornedBeasts
-                                    image_url={thisBeast.image_url}
-                                    title={thisBeast.title}
-                                    description={thisBeast.description}
-                                />
-                            </div>
-                        )
+                <CardDeck>
+                    {this.props.beasts.map((thisBeast, index) => {
+                            return (
+                                <div key={index}>
+                                    <HornedBeasts
+                                        image_url={thisBeast.image_url}
+                                        title={thisBeast.title}
+                                        description={thisBeast.description}
+                                    />
+                                </div>
+                            )
 
-                    })
-                }
+                        })
+                    }
+                </CardDeck>
             </>
         )
     }
