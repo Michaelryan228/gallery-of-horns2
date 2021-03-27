@@ -16,7 +16,7 @@ class HornedBeast extends React.Component {
         return (
             <div>
                 <Card style={{ width: '18rem' }} onClick= {this.numOfClicks}>
-                    <Card.Img variant="top" src= {this.props.image_url}/>
+                    <Card.Img variant="top" src= {this.props.image_url} onClick= {() => this.props.displayAsModal(this.props.index)}/>
                     <Card.Body>
                         <Card.Title>{this.props.title}</Card.Title>
                         <Card.Text>

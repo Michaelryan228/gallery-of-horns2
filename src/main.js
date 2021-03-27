@@ -15,6 +15,8 @@ class Main extends React.Component {
                                         image_url={thisBeast.image_url}
                                         title={thisBeast.title}
                                         description={thisBeast.description}
+                                        displayAsModal={this.props.displayAsModal}
+                                        index= {index}
                                     />
                                 </div>
                             )
