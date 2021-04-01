@@ -1,12 +1,16 @@
 import React from 'react';
 import HornedBeasts from './Horned-Beasts.js';
 import CardDeck from 'react-bootstrap/CardDeck';
+import FormInfo from './form.js'
 // import Data from './data.json';
 
 class Main extends React.Component {
     render() {
         return (
             <>
+            <FormInfo
+                filteredHorns={this.props.filteredHorns}
+                />
                 <CardDeck>
                     {this.props.beasts.map((thisBeast, index) => {
                             return (
@@ -17,6 +21,7 @@ class Main extends React.Component {
                                         description={thisBeast.description}
                                         displayAsModal={this.props.displayAsModal}
                                         index= {index}
+                                        horns={thisBeast.horns}
                                     />
                                 </div>
                             )

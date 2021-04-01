@@ -25,6 +25,10 @@ class App extends React.Component {
     this.setState({displayModal: false});
   }
 
+  filteredHorns = (newData) => {
+    this.setState({newData});
+  }
+
 
   render() {
     return (
@@ -33,6 +37,7 @@ class App extends React.Component {
         <Header />
         <Main beasts={this.state.newData}
         displayAsModal={this.displayAsModal} 
+        filteredHorns={this.filteredHorns}
         />
         <SelectedBeast
         show={this.state.displayModal}
